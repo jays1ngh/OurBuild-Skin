@@ -5,7 +5,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
-    /* line-height: 1.6; */
+    /* line-height: 1.6rem; */
 }
 
 /***********************************
@@ -17,8 +17,9 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 999;
-    height: 65px;
-    line-height: 65px;
+    /* height: 65px;
+    line-height: 65px; */
+    padding: 1.5rem 0 1.5rem 0;
 }
 
 .nav-wrapper{
@@ -37,6 +38,7 @@ nav {
 }
 
 .nav-wrapper .logo a {
+    
 }
 
 .nav-wrapper .nav-links {
