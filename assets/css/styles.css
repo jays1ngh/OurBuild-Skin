@@ -17,9 +17,10 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 999;
-    /* height: 65px;
-    line-height: 65px; */
-    padding: 1.5rem 0 1.5rem 0;
+    height: 65px;
+    line-height: 65px;
+    /* used padding below instead of height and line height */
+    /* padding: 1.5rem 0 1.5rem 0; */
 }
 
 .nav-wrapper{
@@ -38,7 +39,8 @@ nav {
 }
 
 .nav-wrapper .logo a {
-    
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .nav-wrapper .nav-links {
@@ -47,4 +49,37 @@ nav {
 
 .nav-links li {
     list-style: none;
+}
+
+.nav-links li a{
+    font-weight: 400;
+    padding: .5rem 1rem;
+    border-radius: .30rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover{
+    background: #292929;
+}
+
+.nav-links .drop-menu{
+    background: #454545;
+    width: 180px;
+    top: 65px;
+    line-height: 45px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-links li:hover .drop-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    border-radius: 0px;
 }
