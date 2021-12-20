@@ -79,11 +79,11 @@ nav {
     transition: all 0.3s ease;
 }
 
-.drop-menu li a{
+.nav-links .drop-menu li a{
     width: auto;
     display: block;
     padding: 0 0 0 1rem;
-    border-radius: 0px;
+    border-radius: .3rem;
 }
 
 /***********************************
@@ -117,16 +117,66 @@ nav {
 
     .nav-links li {
         margin: .8rem .75rem;
+        /*  15px .80rem
+            10px .75rem
+            20px .90rem */
     }
 
     .nav-links li a{
         padding: 0 .9rem;
         display: block;
-        font-size: .9rem;
+        font-size: .9em;
     }
 
     .nav-links .drop-menu {
         position: static;
+        opacity: 1;
+        visibility: visible;
+        top: 3rem;
+        padding-left: 1rem;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #drop-menu-showdrop:checked ~ .drop-menu{
+        max-height: 100%;
+    }
+
+    .nav-links .drop-menu li {
+        margin: 0;
+    }
+
+    .nav-links .drop-menu li a {
+        font-size: .85em;
+        border-radius: .3rem;
+    }
+
+    .nav-links .desktop-drop-menu {
+        display: none;
+    }
+
+    .nav-links .mobile-drop-menu {
+        display: block;
+        font-size: .90em;
+        color: #ebebeb;
+        font-weight: 500;
+        padding-left: .90rem;
+        cursor: pointer;
+        border-radius: .3rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .mobile-drop-menu:hover {
+        background: #292929;
+    }
+
+    .nav-wrapper input {
+        display: none;
+    }
+
+    .nav-wrapper btn {
+        color: #ebebeb;
     }
 }
 
@@ -183,5 +233,9 @@ nav {
         display: block;
         padding: 0 0 0 1rem;
         border-radius: 0px;
+    }
+
+    .nav-links .mobile-drop-menu {
+        display: none;
     }
 }

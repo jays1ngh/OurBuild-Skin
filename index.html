@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/efc5d04e84.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/efc5d04e84.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,10 +21,14 @@
             </div>
 
             <ul class="nav-links">
+                <label for="" class="btn nav-cancel-btn"><i class="fas fa-times"></i></label>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
                 <li>
-                    <a href="#">Land</a>
+                    <a href="#" class="desktop-drop-menu">Land</a>
+                      <!-- mobile drop menu -->
+                    <input type="checkbox" id="drop-menu-showdrop">
+                    <label for="drop-menu-showdrop" class="mobile-drop-menu">Land</label>
                     <ul class="drop-menu">
                         <li><a href="#">Suburb</a></li>
                         <li><a href="#">Size</a></li>
@@ -35,6 +40,7 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Search</a></li>
             </ul>
+            <label for="" class="btn nav-menu-btn"><i class="fas fa-bars"></i></label>
         </div>
     </nav>
 
