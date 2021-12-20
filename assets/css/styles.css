@@ -64,22 +64,124 @@ nav {
 
 .nav-links .drop-menu{
     background: #454545;
-    width: 180px;
-    top: 65px;
-    line-height: 45px;
+    width: 10rem;
+    top: 3.5rem;
+    line-height: 2.5rem;
     position: absolute;
     opacity: 0;
     visibility: hidden;
 }
 
 .nav-links li:hover .drop-menu{
+    top: 3.5rem;
     opacity: 1;
     visibility: visible;
+    transition: all 0.3s ease;
 }
 
 .drop-menu li a{
-    width: 100%;
+    width: auto;
     display: block;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 1rem;
     border-radius: 0px;
+}
+
+/***********************************
+           Media Queries 
+************************************/
+
+@media (min-width:200px) and (max-width:390px) {
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+    .nav-wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 20rem;
+        background: #454545;
+        display: block;
+        top: 0;
+        left: 0;
+        /* overflow-y: auto; */
+        line-height: 3rem;
+        padding: 3rem .75rem;
+        box-shadow: 0 .8rem .8rem rgba(0,0,0,0.15);
+    }
+
+    .nav-links li {
+        margin: .8rem .75rem;
+    }
+
+    .nav-links li a{
+        padding: 0 .9rem;
+        display: block;
+        font-size: .9rem;
+    }
+
+    .nav-links .drop-menu {
+        position: static;
+    }
+}
+
+@media (min-width: 981px) {
+    nav{
+        height: 65px;
+        line-height: 65px;
+    }
+
+    .nav-wrapper{
+        /* max-width: 1250px; */
+        padding: 0 30px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-wrapper .logo a {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .nav-wrapper .nav-links {
+        display: inline-flex;
+    }
+
+    .nav-links li a{
+        font-weight: 400;
+        padding: .5rem 1rem;
+        border-radius: .30rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .drop-menu{
+        background: #454545;
+        width: 10rem;
+        top: 3.5rem;
+        line-height: 2.5rem;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-links li:hover .drop-menu{
+        top: 3.5rem;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+
+    .drop-menu li a{
+        width: auto;
+        display: block;
+        padding: 0 0 0 1rem;
+        border-radius: 0px;
+    }
 }
