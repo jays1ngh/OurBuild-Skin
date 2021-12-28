@@ -93,6 +93,10 @@ nav {
     display: block;
 }
 
+.nav-wrapper input {
+    display: none;
+}
+
 /***********************************
            Media Queries 
 ************************************/
