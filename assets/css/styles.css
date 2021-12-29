@@ -8,6 +8,10 @@
     /* line-height: 1.6rem; */
 }
 
+/*  15px .80rem
+            10px .75rem
+            20px .90rem */
+
 /***********************************
             Navigation 
 ************************************/
@@ -44,16 +48,47 @@ nav {
 }
 
 .nav-wrapper .nav-links {
-    display: inline-flex;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    /* equivilant to 350px */
+    max-width: 20rem; 
+    background: #454545;
+    display: block;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    line-height: 3rem;
+    padding: 3rem .75rem;
+    box-shadow: 0 .8rem .8rem rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+#nav-menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+
+#nav-menu-btn:checked ~ .btn.nav-menu-btn {
+display: none;
+}
+
+#nav-cancel-btn:checked ~ .btn.nav-menu-btn {
+display: block;
+}
+
+.nav-links::-webkit-scrollbar{
+    width: 0px;
 }
 
 .nav-links li {
     list-style: none;
+    margin: .8rem .75rem;
 }
 
 .nav-links li a{
     font-weight: 400;
-    padding: .5rem 1rem;
+    font-size: .85em;
+    padding: 0 .9rem;
     border-radius: .30rem;
     transition: all 0.3s ease;
 }
@@ -62,21 +97,29 @@ nav {
     background: #292929;
 }
 
-.nav-links .drop-menu{
-    background: #454545;
-    width: 10rem;
-    top: 3.5rem;
-    line-height: 2.5rem;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
+.nav-links .desktop-drop-menu {
+    display: none;
 }
 
-.nav-links li:hover .drop-menu{
-    top: 3.5rem;
-    opacity: 1;
+.nav-links .drop-menu{
+    background: #454545;
+    line-height: 2.5rem;
+    position: static;
     visibility: visible;
-    transition: all 0.3s ease;
+    width: 100%;
+    top: 3rem;
+    opacity: 1;
+    max-height: 0;
+    padding-left: 1rem;
+    overflow: hidden;
+}
+
+#drop-menu-showdrop:checked ~ .drop-menu{
+    max-height: 100%;
+}
+
+.nav-links .drop-menu li {
+    margin: 0;
 }
 
 .nav-links .drop-menu li a{
@@ -84,6 +127,26 @@ nav {
     display: block;
     padding: 0 0 0 1rem;
     border-radius: .3rem;
+}
+
+.nav-links .mobile-drop-menu {
+    display: block;
+    font-size: .90em;
+    color: #ebebeb;
+    font-weight: 500;
+    padding-left: .90rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links .mobile-drop-menu:hover {
+    background: #292929;
+}
+
+.nav-wrapper .btn {
+    color: #ebebeb;
+    cursor: pointer;
 }
 
 .nav-wrapper .btn.nav-cancel-btn {
@@ -111,110 +174,9 @@ nav {
 }
 
 @media (min-width: 769px) and (max-width: 980px) {
-    .nav-wrapper .nav-links {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        /* equivilant to 350px */
-        max-width: 20rem; 
-        background: #454545;
-        display: block;
-        top: 0;
-        left: -100%;
-        overflow-y: auto;
-        line-height: 3rem;
-        padding: 3rem .75rem;
-        box-shadow: 0 .8rem .8rem rgba(0,0,0,0.15);
-        transition: all 0.3s ease;
-    }
 
-    #nav-menu-btn:checked ~ .nav-links {
-        left: 0%;
-      }
 
-    #nav-menu-btn:checked ~ .btn.nav-menu-btn {
-    display: none;
-    }
     
-    #nav-cancel-btn:checked ~ .btn.nav-menu-btn {
-    display: block;
-    }
-
-    .nav-links::-webkit-scrollbar{
-        width: 0px;
-    }
-
-    .nav-links li {
-        margin: .8rem .75rem;
-        /*  15px .80rem
-            10px .75rem
-            20px .90rem */
-    }
-
-    .nav-links li a{
-        padding: 0 .9rem;
-        display: block;
-        font-size: .9em;
-    }
-
-    .nav-links .drop-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        top: 3rem;
-        padding-left: 1rem;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-    }
-
-    #drop-menu-showdrop:checked ~ .drop-menu{
-        max-height: 100%;
-    }
-
-    .nav-links .drop-menu li {
-        margin: 0;
-    }
-
-    .nav-links .drop-menu li a {
-        font-size: .85em;
-        border-radius: .3rem;
-    }
-
-    .nav-links .desktop-drop-menu {
-        display: none;
-    }
-
-    .nav-links .mobile-drop-menu {
-        display: block;
-        font-size: .90em;
-        color: #ebebeb;
-        font-weight: 500;
-        padding-left: .90rem;
-        cursor: pointer;
-        border-radius: .3rem;
-        transition: all 0.3s ease;
-    }
-
-    .nav-links .mobile-drop-menu:hover {
-        background: #292929;
-    }
-
-    .nav-wrapper input {
-        display: none;
-    }
-
-    .nav-wrapper .btn {
-        color: #ebebeb;
-        cursor: pointer;
-    }
-
-    .nav-wrapper .btn.nav-cancel-btn {
-        position: absolute;
-        right: 1rem;
-        top: .75rem;
-        display: block;
-    }
 
 
 }
@@ -225,15 +187,6 @@ nav {
         line-height: 65px;
     }
 
-    .nav-wrapper{
-        /* max-width: 1250px; */
-        padding: 0 30px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     .nav-wrapper .logo a {
         font-size: 1.5em;
         font-weight: 600;
@@ -241,37 +194,46 @@ nav {
 
     .nav-wrapper .nav-links {
         display: inline-flex;
+        position: static;
+        height: auto;
+        width: auto;
+        max-width: fit-content;
+        padding: 0;
+        transition: none;
+    }
+
+    #nav-cancel-btn:checked ~ .btn.nav-menu-btn {
+        display: none;
+        }
+
+    .nav-links li {
+        margin: 0;
     }
 
     .nav-links li a{
-        font-weight: 400;
         padding: .5rem 1rem;
-        border-radius: .30rem;
-        transition: all 0.3s ease;
+        font-size: 1em;
+    }
+
+    .nav-links .desktop-drop-menu {
+        display: inline;
     }
 
     .nav-links .drop-menu{
-        background: #454545;
+        position: absolute;
+        visibility: hidden;
         width: 10rem;
         top: 3.5rem;
-        line-height: 2.5rem;
-        position: absolute;
         opacity: 0;
-        visibility: hidden;
+        max-height: fit-content;
+        padding: 0;
     }
-
+    
     .nav-links li:hover .drop-menu{
-        top: 3.5rem;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s ease;
-    }
-
-    .drop-menu li a{
-        width: auto;
-        display: block;
-        padding: 0 0 0 1rem;
-        border-radius: 0px;
+      transition: all 0.3s ease;
+      top: 3.5rem;
+      opacity: 1;
+      visibility: visible;
     }
 
     .nav-links .mobile-drop-menu {
