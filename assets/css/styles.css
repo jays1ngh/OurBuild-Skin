@@ -120,21 +120,22 @@ nav {
         background: #454545;
         display: block;
         top: 0;
-        left: 0;
+        left: -100%;
         overflow-y: auto;
         line-height: 3rem;
         padding: 3rem .75rem;
         box-shadow: 0 .8rem .8rem rgba(0,0,0,0.15);
     }
 
-    #nav-menu-btn:checked ~ .nav-links{
-        left: 100%;
+    #nav-menu-btn:checked ~ .nav-links {
+        left: 0%;
       }
 
-    #nav-menu-btn:checked ~ .btn.nav-menu-btn{
+    #nav-menu-btn:checked ~ .btn.nav-menu-btn {
     display: none;
     }
-    #nav-cancel-btn:checked ~ .btn.nav-menu-btn{
+    
+    #nav-cancel-btn:checked ~ .btn.nav-menu-btn {
     display: block;
     }
 
