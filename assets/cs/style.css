@@ -18,6 +18,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Documention */
 
+/* Changes */
+/*
+- Removed line-height from .icon-home-down
+
+*/
+
 /* Z-Index */
 /*
 burger-menu: 1000
@@ -144,9 +150,46 @@ body {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .align-items-center {
     align-items: center;
 }
+
+.align-items-left {
+    align-items: left;
+}
+
+/* imgaes */
+
+.img-width-100 {
+    width: 100%;
+}
+
+.img-display-block {
+    display: block;
+}
+
+/* divs */
+div-max-width-30 {
+    max-width: 30;
+}
+
+div-max-width-40 {
+    max-width: 40;
+}
+
+div-max-width-60 {
+    max-width: 60;
+}
+
+div-max-width-70 {
+    max-width: 70;
+}
+
+
 
 /* others */
 
@@ -811,6 +854,18 @@ body {
     padding: 0 2rem 2rem 2rem;
 }
 
+}
+
+/********************/
+/* Timeline */
+/********************/
+
+.container-timeline-1 {
+    height: 820px;
+    background-color: #6F92E5;
+    color: var(--clr-secondary);
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 769px) and (max-width: 912px) {
