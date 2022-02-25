@@ -1,5 +1,7 @@
-# OurBuild-Skin
-OurBuild WP Theme HTML Skin
+# responsive-nav
+Responsive navigation built with HTML, CSS and JS
 
-# Description
-This is HTML skin for OurBuild WP Theme, which will be used to produce fully fledged WP Theme later.
+## Details
+HTML file: index.html
+CSS file: assets\cs\style.css
+JS file: assets\js\nav.js

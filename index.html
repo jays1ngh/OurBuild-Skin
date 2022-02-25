@@ -5,57 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Build</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/efc5d04e84.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="https://kit.fontawesome.com/efc5d04e84.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets\cs\style.css" class="stylesheet">
+    <script src="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"></script>
+    <script src="https://kit.fontawesome.com/efc5d04e84.js"></script>
+    <title>Navbar</title>
 </head>
 
 <body>
+    <header class="primary-header flex">
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-wrapper">
-            <div class="logo"><a href="#">Our Build</a>
-            </div>
-            <input type="radio" name="slide" id="nav-menu-btn">
-            <input type="radio" name="slide" id="nav-cancel-btn">
-
-            <ul class="nav-links">
-                <label for="nav-cancel-btn" class="btn nav-cancel-btn"><i class="fas fa-times"></i></label>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li>
-                    <a href="#" class="desktop-drop-menu">Land</a>
-                      <!-- mobile drop menu -->
-                    <input type="checkbox" id="drop-menu-showdrop">
-                    <label for="drop-menu-showdrop" class="mobile-drop-menu">Land</label>
-                    <ul class="drop-menu">
-                        <li><a href="#">Suburb</a></li>
-                        <li><a href="#">Size</a></li>
-                        <li><a href="#">COS</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Builder</a></li>
-                <li><a href="#">Progress</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
-            <label for="nav-menu-btn" class="btn nav-menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="ourbuild-logo uppercase letter-spacing-1">
+            <h4 class="fs-500">Our Build</h4>
         </div>
-    </nav>
 
-    <!-- Main -->
-    <main>
+        <nav>
+            <ul class="header-links flex uppercase">
+                <li><a href="#">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
 
-    </main>
+        <div class="burger-menu">
+            <div class="burger-menu-line1"></div>
+            <div class="burger-menu-line2"></div>
+            <div class="burger-menu-line3"></div>
+        </div>
 
-    <footer>
+    </header>
 
-    </footer>
+    <div class="container-home">
+        <!-- 1 -->
+        <div class="container-home-1 flex flex-column align-items-center">
+            <div class="container-home-1-pri">
+                <h1 class="home-text-1 uppercase fs-750 text-center fs-color-secondary">Voyage to our first</h1>
+                <h1 class="home-text-2 uppercase fs-750 text-center fs-color-secondary">Home Build</h1>
+            </div>
+            <div class="container-home-1-sec">
+                <p class="fs-500 fs-color-white text-center">We have decided to share the journey of our first home
+                    build through this blog. With mixed feelings of excitement and nervousness,
+                    we set our sail and our voyage is in progress. Check this blog for more insights.
+                </p>
+            </div>
 
+            <i class="fas fa-arrow-down icon-home-down"></i>
+            
+        </div>
+        <!-- 2 -->
+        <div class="container-home-2 flex">
+            <div class="container-home-2-sub-1">
+                <img class="img-home-sec-1" src="wp-content/uploads/2022/01/progress-920x518-1.jpg" alt="">
+                </div>
 
+                <div class="container-home-2-sub-2">
+                <h2>Build Progress</h2>
+                <p>Finalised the floor plans and signed the building contract.
+                We are eagerly waiting on the Gallerie appointment which
+                is currently booked.
+                </p>
+
+                <a class="btn-learn-more-a" href="#">
+                    <button class="btn-learn-more fs-400">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-angle-right"></i>
+                    </button>
+                </a>
+
+                </div>
+        </div>
+        <!-- 3 -->
+        <div class="container-home-3 flex">
+            <div class="container-home-3-sub-1">
+                <h2>Our Builder</h2>
+                <p>We already knew what we wanted, because the time we spent finding the 
+                land also invested towards looking at existing properties and display
+                homes.
+                </p>
+
+                <a class="btn-learn-more-a" href="#">
+                    <button class="btn-learn-more fs-400">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-angle-right"></i>
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="container-home-3-sub-2">
+                <img class="img-home-sec-2" src="wp-content/uploads/2022/01/builder-920-518.jpg" alt="">
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="container-home-4 flex">
+            <div class="container-home-4-sub-1">
+                <img class="img-home-sec-3" src="wp-content/uploads/2022/01/green-pattern-920-518.png" alt="">
+            </div>
+
+            <div class="container-home-4-sub-2">
+                <h2>Our Land</h2>
+                <p>Took us 8 months to secure this parcel of land. Considering the current
+                    market’s high prices and limited availability of blocks,it wasn’t easy.
+                    Lockdowns in Victoria didn’t help this either.
+                </p>
+
+                <a class="btn-learn-more-a" href="#">
+                    <button class="btn-learn-more fs-400">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-angle-right"></i>
+                    </button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- navigation js -->
+    <script src="assets/js/nav.js"></script>
 </body>
 
 </html>
