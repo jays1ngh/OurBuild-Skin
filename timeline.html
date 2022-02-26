@@ -15,7 +15,7 @@
     <header class="primary-header flex">
 
         <div class="ourbuild-logo uppercase letter-spacing-1">
-            <h4 class="fs-500">Our Build</h4>
+            <h4 class="fs-500 fs-color-secondary" >Our Build</h4>
         </div>
 
         <nav>
@@ -38,90 +38,54 @@
 
     <div class="container-timeline">
         <!-- 1 -->
-        <div class="container-timeline-1 flex align-items-left">
-            <div class="container-home-1-pri div-max-width-60">
-                <h1 class="home-text-1 uppercase fs-700 text-center fs-color-secondary">Check out our build</h1>
-                <h1 class="home-text-2 uppercase fs-750 text-center fs-color-primary">timeline</h1>
-                <p class="fs-500 fs-color-white text-center" style="padding-top: 4rem;">We have decided to share the journey of our first home
-                    build through this blog. With mixed feelings of excitement and nervousness,
-                    we set our sail and our voyage is in progress. Check this blog for more insights.
-                </p>
+        <div class="container-timeline-1 flex flex-column align-items-center">
+            <div class="flex" style="padding-top: 8rem;">
+                <div class="flex flex-column align-items-left" style="max-width: 50%;">
+                    <div class="container-timeline-1-pri">
+                        <h1 class="home-text-1 uppercase fs-700 text-left fs-color-secondary">Check out our build</h1>
+                        <h1 class="home-text-2 uppercase fs-750 text-left fs-color-secondary">timeline</h1>
+                        <p class="fs-500 fs-color-white text-left" style="padding-top: 4rem;">We will add progress of our build to this blog with
+                            detailed information.
+                        </p>
+                    </div>                
+                </div>
+
+                <div style="max-width: 50%; padding: 4rem 2rem 4rem 2rem;">
+                    <img src="/assets/img/timeline-page-1.png" alt="" style="width: 100%;">
+                </div>
             </div>
-            <div class="container-home-1-sec div-max-width-40">
-                <img class="img-width-100 img-display-block" style="padding-top: 60vh; min-width: 400px;" src="/assets/img/timeline-calendar-720x1080.jpg" alt="">
+            <div>
+                <i class="fas fa-arrow-down icon-timeline-page-1"></i></i>
+            </div>                     
+        </div>
+        
+        <!-- 2 -->
+        <div class="container-timeline-2">
+            <div class="timeline-tabs flex" style="justify-content: space-around; max-width: 600px;">
+                <div class="pre-site">
+                    <button class="btn-pre-site fs-500">
+                        <span class="button-text uppercase">pre-site</span>
+                    </button>
+                </div>
+    
+                <div class="on-site">
+                    <button class="btn-on-site fs-500">
+                        <span class="button-text uppercase">on-site</span>
+                    </button>
+                </div>
             </div>
 
-            <i class="fas fa-arrow-down icon-home-down" style="display: none;"></i>
+            <div class="timeline-all-content flex flex-column align-items-center">
+                <div class="pre-site-content">
+                    <p>Pre-site content will go here</p>
+                </div>
+                <div class="on-site-content">
+                    <p>On-site Content will go here</p>
+                </div>
+            </div>
             
         </div>
-        <!-- 2 -->
-        <div class="container-home-2 flex">
-            <div class="container-home-2-sub-1">
-                <img class="img-home-sec-1" style="display: none;" src="assets/img/progress-920x518.jpg" alt="">
-                </div>
-
-                <div class="container-home-2-sub-2" style="display: none;">
-                <h2>Build Progress</h2>
-                <p>Finalised the floor plans and signed the building contract.
-                We are eagerly waiting on the Gallerie appointment which
-                is currently booked.
-                </p>
-
-                <a class="btn-learn-more-a" href="#">
-                    <button class="btn-learn-more fs-400">
-                    <span class="button-text">Learn More</span>
-                    <i class="fas fa-angle-right"></i>
-                    </button>
-                </a>
-
-                </div>
-        </div>
-        <!-- 3 -->
-        <div class="container-home-3 flex">
-            <div class="container-home-3-sub-1">
-                <h2>Our Builder</h2>
-                <p>We already knew what we wanted, because the time we spent finding the 
-                land also invested towards looking at existing properties and display
-                homes.
-                </p>
-
-                <a class="btn-learn-more-a" href="#">
-                    <button class="btn-learn-more fs-400">
-                    <span class="button-text">Learn More</span>
-                    <i class="fas fa-angle-right"></i>
-                    </button>
-                </a>
-
-            </div>
-
-            <div class="container-home-3-sub-2">
-                <img class="img-home-sec-2" src="assets/img/builder-920-518.jpg" alt="">
-            </div>
-        </div>
-        <!-- 4 -->
-        <div class="container-home-4 flex">
-            <div class="container-home-4-sub-1">
-                <img class="img-home-sec-3" src="assets/img/green-pattern-920-518.png" alt="">
-            </div>
-
-            <div class="container-home-4-sub-2">
-                <h2>Our Land</h2>
-                <p>Took us 8 months to secure this parcel of land. Considering the current
-                    market’s high prices and limited availability of blocks,it wasn’t easy.
-                    Lockdowns in Victoria didn’t help this either.
-                </p>
-
-                <a class="btn-learn-more-a" href="#">
-                    <button class="btn-learn-more fs-400">
-                    <span class="button-text">Learn More</span>
-                    <i class="fas fa-angle-right"></i>
-                    </button>
-                </a>
-
-            </div>
-        </div>
     </div>
-
     <footer class="footer text-center bg-primary">
         <div class="footer-credits">
             <ul>
@@ -132,6 +96,7 @@
     </footer>
     <!-- navigation js -->
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/timeline-tabs.js"></script>
 </body>
 
 </html>

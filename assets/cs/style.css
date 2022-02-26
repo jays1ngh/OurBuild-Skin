@@ -173,20 +173,32 @@ body {
 }
 
 /* divs */
-div-max-width-30 {
-    max-width: 30;
+.div-max-width-30 {
+    max-width: 25%;
 }
 
-div-max-width-40 {
-    max-width: 40;
+.div-max-width-30 {
+    max-width: 30%;
 }
 
-div-max-width-60 {
-    max-width: 60;
+.div-max-width-40 {
+    max-width: 40%;
 }
 
-div-max-width-70 {
-    max-width: 70;
+.div-max-width-50 {
+    max-width: 50%;
+}
+
+.div-max-width-60 {
+    max-width: 60%;
+}
+
+.div-max-width-70 {
+    max-width: 70%;
+}
+
+.div-max-width-75 {
+    max-width: 75%;
 }
 
 
@@ -461,6 +473,97 @@ div-max-width-70 {
 .btn-learn-more:hover,
 .btn-learn-more:focus {
     background-color: hsl(var(--clr-white) / .9);
+}
+
+/********************/
+/* Timeline Page only */
+/********************/
+/* 1st Div */
+.container-timeline-1 {
+    height: 900px;
+    background-color: #2589BD;
+    color: var(--clr-secondary);
+    align-items: center;
+    justify-content: center;
+}
+
+.container-timeline-1-pri {
+    max-width: 1000px;
+    padding: 4rem 2rem 4rem 2rem;
+}
+
+.timeline-img-1 {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.icon-timeline-page-1 {
+        font-size: 4rem;
+        background: #6776c9;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        text-align: center;
+        /* line-height: 100px; removed to fix the down arrow to center*/
+        vertical-align: middle;
+        padding: 30px;
+    }
+
+/* 2nd Div */
+.container-timeline-2 {
+    height: fit-content;
+    background-color: #187795;
+    color: var(--clr-secondary);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Timeline Page Animated tabs*/
+
+.timeline-tabs {
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.btn-pre-site,
+.btn-on-site {
+    background-color: hsl(var(--clr-white) / .5);
+    border-radius: 1rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.btn-pre-site:hover,
+.btn-pre-site:focus,
+.btn-on-site:hover,
+.btn-on-site:focus {
+    background-color: hsl(var(--clr-white) / .8);
+}
+
+.timeline-all-content {
+    padding: 0 2rem 0 2rem;
+}
+
+.pre-site-content {
+    display: none;
+    padding-bottom: 6rem;
+}
+
+.pre-site-content-active {
+    display: block;
+}
+
+.on-site-content {
+    display: none;
+    padding-bottom: 6rem;
+}
+
+.on-site-content-active {
+    display: block;
 }
 
 /* OurBuild Timeline */
@@ -854,18 +957,6 @@ div-max-width-70 {
     padding: 0 2rem 2rem 2rem;
 }
 
-}
-
-/********************/
-/* Timeline */
-/********************/
-
-.container-timeline-1 {
-    height: 820px;
-    background-color: #6F92E5;
-    color: var(--clr-secondary);
-    align-items: center;
-    justify-content: center;
 }
 
 @media (min-width: 769px) and (max-width: 912px) {
