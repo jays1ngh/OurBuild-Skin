@@ -1,8 +1,4 @@
-// var templateUrl = object_name.templateUrl;
-// console.log(templateUrl);
-console.log("it works!");
-
-fetch('/assets/js/timeline.json')
+fetch('timeline.json')
     .then(response => response.json())
     .then(data => {
 
@@ -18,28 +14,20 @@ fetch('/assets/js/timeline.json')
                         <div class="timeline-dot"></div>
                         <i class="icon ${timelinedata.icon}"></i>
                     <div class="wrap-timeline-content"> 
-
                         <div class="timeline-content">
-
                             <h2 class="timeline-title">
                                 ${timelinedata.timelineTitle}
                             </h2>
-
                             <div class="timeline-details">
-
                                 <h3>${timelinedata.timelineDetails}
                                 </h3>
-
                             </div> <!-- div-timeline-details-->
-
                             <div class="timeline-more-text">
                                 <p>
                                 ${timelinedata.timelineMoreText}
                                 </p>
                             </div> <!-- div-more-text -->
-
                             <p class="timeline-more">More</p>
-
                         </div> <!-- div-timeline-content-->
                     </div> <!-- div-wrap-timeline-content-->
                     </li>                

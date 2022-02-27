@@ -552,6 +552,10 @@ body {
     padding: 0 2rem 0 2rem;
 }
 
+.timeline-tab-content {
+    transition: 0.3s;
+}
+
 .pre-site-content {
     padding-bottom: 6rem;
 }
@@ -714,6 +718,53 @@ body {
   .timeline-more-icon::after {
     transform: rotate3d(0,0,1,135deg);
     transform-origin: center;
+  }
+  
+  @media (max-width: 500px) {
+  
+    .module-timeline ul::before {
+      content: " ";
+      position: absolute;
+      left: 5%;
+      height: 100%;
+      border-right: 3px solid rgba(0,0,0,.2);
+      margin-top: 13px;
+    }
+  
+    .timeline-date {
+      float: right;
+      width: 90%;
+      font-size: 1em;
+      text-align: left;
+      line-height: 1.3em;
+      padding-top: 5px;
+      padding-left: 10px;
+      
+    }
+  
+    .timeline-post .icon {
+      position: absolute;
+      left: 5%;
+      color: #fff;
+      background: #000;
+      font-size: 12px;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      margin-left: -11px;
+      margin-top: 5px;
+      border-radius: 50%;
+    }
+  
+    .timeline-dot {
+      display: none;
+    }
+  
+    .wrap-timeline-content{
+      width: 90%;
+      float: right;
+    }
   }
   
 
