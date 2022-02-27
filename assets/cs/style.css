@@ -162,7 +162,7 @@ body {
     align-items: left;
 }
 
-/* imgaes */
+/* images */
 
 .img-width-100 {
     width: 100%;
@@ -204,6 +204,10 @@ body {
 
 
 /* others */
+
+.hidden {
+    display: none;
+}
 
 .underline-indicators > * {
     cursor: pointer;
@@ -549,7 +553,6 @@ body {
 }
 
 .pre-site-content {
-    display: none;
     padding-bottom: 6rem;
 }
 
@@ -558,7 +561,6 @@ body {
 }
 
 .on-site-content {
-    display: none;
     padding-bottom: 6rem;
 }
 

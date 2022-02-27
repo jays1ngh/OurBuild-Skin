@@ -3,7 +3,10 @@ const tabs = tabList.querySelectorAll('[role="tab"]');
 
 tabList.addEventListener('keydown', changeTimelineTabFocus);
 
+tabs.forEach((tab) => {
+    tab.addEventListener('click', changeTabContent);
 
+})
     
 
 let tabFocus = 0;
@@ -34,4 +37,19 @@ function changeTimelineTabFocus(e) {
     tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
     
+}
+
+function changeTabContent(e) {
+    const targetTab = e.target;
+    const targetContent = targetTab.getAttribute("aria-controls");
+    
+    const timelineTabContainer = targetTab.parentNode;
+    const timelineContainer = timelineTabContainer.parentNode;
+    const timelineTabContents = timelineContainer.querySelectorAll('.timeline-tab-content')
+
+    console.log(timelineTabContents);
+    timelineTabContents.forEach((timelineTabContent) => timelineTabContent.setAttribute("hidden", true));
+    timelineContainer.querySelector([`#${targetContent}`]).removeAttribute('hidden');
+
+
 }

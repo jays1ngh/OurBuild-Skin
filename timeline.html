@@ -61,23 +61,23 @@
         
         <!-- 2 -->
         <div class="container-timeline-2">
-            <div class="timeline-tabs flex timeline-tab-list" role="timeline-tablist" style="justify-content: space-around; max-width: 600px;">
+            <div class="timeline-tabs flex timeline-tab-list" role="timeline-tablist" aria-label="Timeline Tabs" style="justify-content: space-around; max-width: 600px;">
                 
-                    <button class="btn-pre-site fs-500" role="tab" tabIndex="0">
-                        <span class="button-text uppercase">pre-site</span>
+                    <button class="btn-pre-site fs-500" role="tab" aria-controls="pre-site-tab" tabIndex="0">
+                        PRE-SITE
                     </button>
 
-                    <button class="btn-on-site fs-500" role="tab" tabIndex="-1">
-                        <span class="button-text uppercase">on-site</span>
+                    <button class="btn-on-site fs-500" role="tab" aria-controls="on-site-tab" tabIndex="-1">
+                        ON-SITE
                     </button>
                 
             </div>
 
             <div class="timeline-all-content flex flex-column align-items-center">
-                <div class="pre-site-content" tabIndex="0">
+                <div class="timeline-tab-content pre-site-content" id="pre-site-tab" tabIndex="0">
                     <p>Pre-site content will go here</p>
                 </div>
-                <div class="on-site-content" tabIndex="0">
+                <div hidden class="timeline-tab-content on-site-content" id="on-site-tab" tabIndex="0">
                     <p>On-site Content will go here</p>
                 </div>
             </div>
