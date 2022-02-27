@@ -1,9 +1,13 @@
 const tabList = document.querySelector('[role="timeline-tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
-let tabFocus = 0;
+tabList.addEventListener('keydown', changeTimelineTabFocus);
 
-tabList.addEventListener('keydown', (e) => {
+
+    
+
+let tabFocus = 0;
+function changeTimelineTabFocus(e) {
     const keydownLeft = 37;
     const keydownRight = 39;
 
@@ -29,4 +33,5 @@ tabList.addEventListener('keydown', (e) => {
 
     tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
-})
+    
+}
