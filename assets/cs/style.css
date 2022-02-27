@@ -566,6 +566,10 @@ body {
     display: block;
 }
 
+[role="tab"]:focus {
+    color: limegreen;
+}
+
 /* OurBuild Timeline */
 
 .page-header {

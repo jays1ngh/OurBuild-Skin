@@ -1,14 +1,32 @@
-const preSiteBtn = document.querySelector(".btn-pre-site");
-const onSiteBtn = document.querySelector(".btn-on-site");
-const preSiteContent = document.querySelector(".pre-site-content");
-const onSiteContent = document.querySelector(".on-site-content");
+const tabList = document.querySelector('[role="timeline-tablist"]');
+const tabs = tabList.querySelectorAll('[role="tab"]');
 
-preSiteBtn.addEventListener('click', () => {
-    preSiteContent.classList.toggle('pre-site-content-active');
-    onSiteContent.classList.remove('on-site-content-active');
-})
+let tabFocus = 0;
 
-onSiteBtn.addEventListener('click', () => {
-    onSiteContent.classList.toggle('on-site-content-active');
-    preSiteContent.classList.remove('pre-site-content-active');
+tabList.addEventListener('keydown', (e) => {
+    const keydownLeft = 37;
+    const keydownRight = 39;
+
+    // change the tabindex of the current tab to -1
+    if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
+        tabs[tabFocus].setAttribute("tabindex", -1);
+    }
+    // if the right key is pushed, move to the next tab on the right
+    if (e.keyCode === keydownRight) {
+        tabFocus++;
+        if (tabFocus >= tabs.length) {
+            tabFocus = 0;
+        }
+    }
+    
+    // if the left key is pushed, move to the next tab on the left
+    if (e.keyCode === keydownLeft) {
+        tabFocus--;
+        if (tabFocus < 0) {
+            tabFocus = tabs.length -1;
+        }
+    }
+
+    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].focus();
 })
