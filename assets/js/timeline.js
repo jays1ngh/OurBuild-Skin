@@ -8,8 +8,7 @@ fetch('/assets/js/timeline.json')
 
         let output = "";
 
-        for(let timelinedata of data){
-
+        for(let timelinedata of data){     
 
             output += `            
                 
@@ -32,7 +31,7 @@ fetch('/assets/js/timeline.json')
 
                             </div> <!-- div-timeline-details-->
 
-                            <div class="timeline-more-text">
+                            <div class="timeline-more-text" id="timeline-more-text-container">
                                 <p>
                                 ${timelinedata.timelineMoreText}
                                 </p>
@@ -42,14 +41,25 @@ fetch('/assets/js/timeline.json')
 
                         </div> <!-- div-timeline-content-->
                     </div> <!-- div-wrap-timeline-content-->
-                    </li>                
+                    </li>
             
             `; 
         }
 
-        
         const moduleTimelineUl = document.querySelector(".module-timeline-ul");
         moduleTimelineUl.innerHTML = output;
+
+        // Add check blogpost button if blogpostLink is added
+
+        for(let timelinedatai of data){
+            if (timelinedatai.blogpostLink > "") {
+                let checkBlogBtn = document.createElement("button");
+                checkBlogBtn.innerHTML = "Check out the detailed blog";
+                checkBlogBtn.className = "btn-timeline-check-blog"
+                const timelineMoreTextContainer = document.getElementById("timeline-more-text-container");
+                timelineMoreTextContainer.appendChild(checkBlogBtn);
+            }
+        }
         
         // Show more text and adds animation to More
         const timelineMoreTextDivs = document.querySelectorAll(".timeline-more-text");

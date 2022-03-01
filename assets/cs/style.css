@@ -79,6 +79,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* ------------------ */
 /* Utility classes */
 /* ------------------ */
@@ -518,6 +522,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+.icon-timeline-page-1-a {
+    all: unset;
+    cursor: pointer;
+}
+
 .icon-timeline-page-1 {
         font-size: 4rem;
         background: #6776c9;
@@ -528,10 +537,15 @@ body {
         /* line-height: 100px; removed to fix the down arrow to center*/
         vertical-align: middle;
         padding: 30px;
+        transition: .3s;
     }
 
+.icon-timeline-page-1:hover {
+    background:hsl( var(--clr-secondary) );
+}
+
 /* 2nd Div */
-.container-timeline-2 {
+#container-timeline-2 {
     height: fit-content;
     background-color: #187795;
     color: var(--clr-secondary);
@@ -711,6 +725,21 @@ body {
     margin-bottom: 1rem;
     /* ensure this comes after .timeline-more-text */
   }
+
+.btn-timeline-check-blog {
+    background-color: hsl(var(--clr-white) / .5);
+    border-radius: 1rem;
+    padding: .5rem 1rem .5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.btn-timeline-check-blog:focus,
+.btn-timeline-check-blog:hover {
+    background-color: hsl(var(--clr-white) / .8);
+}
   
   .timeline-more {
     text-decoration: none;
