@@ -55,9 +55,13 @@ fetch('/assets/js/timeline.json')
             if (timelinedatai.blogpostLink > "") {
                 let checkBlogBtn = document.createElement("button");
                 checkBlogBtn.innerHTML = "Check out the detailed blog";
-                checkBlogBtn.className = "btn-timeline-check-blog"
+                checkBlogBtn.className = "btn-timeline-check-blog";
+                checkBlogBtn.onclick = function() {
+                    location.href = timelinedatai.blogpostLink;}
                 const timelineMoreTextContainer = document.getElementById("timeline-more-text-container");
                 timelineMoreTextContainer.appendChild(checkBlogBtn);
+            } else {
+                // don't add button "Check out the detailed blog"
             }
         }
         
