@@ -415,6 +415,11 @@ html {
     padding: 30px;
 }
 
+.icon-home-down-a {
+    all: unset;
+    cursor: pointer;
+}
+
     /* section 2 */
 .container-home-2-sub-2 h2 {
     font-size: var(--fs-650);
